@@ -39,11 +39,10 @@
         android:layout_height="1dp"
         android:background="#EAE8E8"/>
 
-    <com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer
+    <com.qzbc.cpqp.qzbc.ui.view.MyVideoPlayer
         android:id="@+id/video_player"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -26,5 +26,6 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:26.+'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.3'
-    compile 'com.shuyu:GSYVideoPlayer:1.6.8'
+//    compile 'com.shuyu:GSYVideoPlayer:1.6.8'
+    compile 'cn.jzvd:jiaozivideoplayer:6.2.9'
 }
