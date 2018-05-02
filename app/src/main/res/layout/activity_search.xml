@@ -39,83 +39,60 @@
         android:layout_height="1dp"
         android:background="#EAE8E8"/>
 
-    <RadioGroup
-        android:id="@+id/rg_brand"
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@android:color/white">
+        android:layout_gravity="center"
+        android:background="@android:color/white"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:scrollbars="none">
 
-        <RadioButton
-            android:layout_width="wrap_content"
+        <RadioGroup
+            android:id="@+id/rg_brand"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="全部车型"/>
+            android:background="@android:color/white"
+            android:orientation="horizontal">
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="宝马"/>
+        </RadioGroup>
+    </HorizontalScrollView>
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="一汽"/>
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="荣威"/>
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="比亚迪"/>
-    </RadioGroup>
-
-    <RadioGroup
-        android:id="@+id/rg_tech"
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@android:color/white">
+        android:layout_gravity="center"
+        android:background="@android:color/white"
+        android:padding="15dp"
+        android:scrollbars="none">
 
-        <RadioButton
-            android:layout_width="wrap_content"
+        <RadioGroup
+            android:id="@+id/rg_tech"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="全部工艺"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="安装工艺"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="拆卸工艺"/>
-    </RadioGroup>
+            android:background="@android:color/white"
+            android:orientation="horizontal">
 
-    <RadioGroup
-        android:id="@+id/rg_structure"
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@android:color/white">
-        <RadioButton
-            android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/white"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:scrollbars="none">
+
+        <RadioGroup
+            android:id="@+id/rg_structure"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="构造"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="底盘"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="车头"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="车身"/>
-    </RadioGroup>
+            android:orientation="horizontal">
+
+        </RadioGroup>
+    </HorizontalScrollView>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -126,7 +103,8 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rcv_search"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"/>
     </ScrollView>
 
 </LinearLayout>

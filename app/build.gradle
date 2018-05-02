@@ -28,4 +28,10 @@ dependencies {
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.3'
 //    compile 'com.shuyu:GSYVideoPlayer:1.6.8'
     compile 'cn.jzvd:jiaozivideoplayer:6.2.9'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.open-android:Zxing:v1.0.3'
+    compile 'com.github.fodroid:XRadioGroup:v1.1'
+
 }

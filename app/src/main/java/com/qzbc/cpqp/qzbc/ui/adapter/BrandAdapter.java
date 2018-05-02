@@ -38,7 +38,7 @@ public class BrandAdapter extends RecyclerView.Adapter<BrandAdapter.ViewHolder> 
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.mIvBrand.setImageResource(mBrandImg[position]);
         holder.mTv_brand.setText(mBrandName[position]);
-        holder.itemView.setTag("http://baobab.kaiyanapp.com/api/v1/playUrl?vid=100364&resourceType=video&editionType=default&source=aliyun");
+        holder.itemView.setTag("http://192.168.1.86/sdvrdistfile/6813ddf5-114a-48c8-ba55-e6ce82309ee2.mp4");
     }
 
     @Override

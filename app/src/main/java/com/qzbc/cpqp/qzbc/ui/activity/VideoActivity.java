@@ -1,12 +1,16 @@
 package com.qzbc.cpqp.qzbc.ui.activity;
 
+import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.qzbc.cpqp.qzbc.R;
+import com.qzbc.cpqp.qzbc.bean.WholeBean;
 import com.qzbc.cpqp.qzbc.ui.base.BaseActivity;
 import com.qzbc.cpqp.qzbc.ui.view.MyVideoPlayer;
 import com.qzbc.cpqp.qzbc.utils.ScreenUtil;
+
+import java.io.Serializable;
 
 import butterknife.Bind;
 import cn.jzvd.JZUtils;
@@ -34,7 +38,11 @@ public class VideoActivity extends BaseActivity {
     TextView mTvDescribe3;
     @Bind(R.id.tv_introduce)
     TextView mTvIntroduce;
+
     private String mUrl;
+    private String mVideoName;
+    private String mBusinessName;
+    private String mDescription;
 
     @Override
     public int getContentViewId() {
@@ -44,9 +52,26 @@ public class VideoActivity extends BaseActivity {
     protected void initView() {
         int screenWidth = ScreenUtil.instance(this).getScreenWidth();
         mVideoPlayer.getLayoutParams().height = screenWidth*9/16 ;
-        mUrl = getIntent().getStringExtra("url");
+
+        getIntentData();
+
+        mTvTitle.setText(mVideoName);
+        mTvDescribe1.setText(mBusinessName);
+        mTvIntroduce.setText("内容介绍：\n" +mDescription);
         mVideoPlayer.setUp(mUrl, MyVideoPlayer.SCREEN_WINDOW_NORMAL, "");
         mVideoPlayer.startVideo();
+
+    }
+
+    private void getIntentData() {
+        WholeBean.VtrainBusinessVideoListBean vtrainBusinessVideoListBean
+                = (WholeBean.VtrainBusinessVideoListBean) getIntent()
+                .getSerializableExtra("vtrainBusinessVideoListBean");
+
+        mUrl = vtrainBusinessVideoListBean.getVideoFileID();
+        mVideoName = vtrainBusinessVideoListBean.getVideoName();
+        mBusinessName = vtrainBusinessVideoListBean.getBusinessName();
+        mDescription = vtrainBusinessVideoListBean.getDescription();
     }
 
     @Override
