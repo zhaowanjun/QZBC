@@ -8,14 +8,14 @@
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
         android:background="@android:color/white"
-        android:padding="16dp">
+        android:paddingLeft="16dp">
 
         <ImageView
-            android:id="@+id/iv_menu"
+            android:id="@+id/iv_back"
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:layout_centerVertical="true"
-            android:src="@mipmap/menu"/>
+            android:src="@mipmap/backb"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -24,14 +24,6 @@
             android:text="拆装教程"
             android:textSize="20sp"/>
 
-        <ImageView
-            android:id="@+id/iv_scan"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:src="@mipmap/scan"/>
-
     </RelativeLayout>
 
     <TextView
@@ -39,7 +31,7 @@
         android:layout_height="1dp"
         android:background="#EAE8E8"/>
 
-    <com.qzbc.cpqp.qzbc.ui.view.MyVideoPlayer
+    <com.qzbc.cpqp.ui.view.MyVideoPlayer
         android:id="@+id/video_player"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

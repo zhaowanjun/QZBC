@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.qzbc.cpqp.qzbc">
+          package="com.qzbc.cpqp">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -12,14 +12,14 @@
     <uses-permission android:name="android.permission.FLASHLIGHT" />
 
     <application
-        android:name=".MyApplication"
+        android:name="com.qzbc.cpqp.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".ui.activity.SplashActivity"
+        <activity android:name="com.qzbc.cpqp.ui.activity.SplashActivity"
                   android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -28,22 +28,25 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.activity.LoginActivity"
+        <activity android:name="com.qzbc.cpqp.ui.activity.LoginActivity"
                   android:screenOrientation="portrait"/>
 
-        <activity android:name=".ui.activity.MainActivity"
+        <activity android:name="com.qzbc.cpqp.ui.activity.MainActivity"
                   android:screenOrientation="portrait"/>
 
-        <activity android:name=".ui.activity.MenuActivity"
+        <activity android:name="com.qzbc.cpqp.ui.activity.MenuActivity"
                   android:screenOrientation="portrait"/>
 
-        <activity android:name=".ui.activity.ScannerActivity"
+        <activity android:name="com.qzbc.cpqp.ui.activity.ScannerActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.activity.SeekActivity"
                   android:screenOrientation="portrait"/>
 
         <activity android:name=".ui.activity.SearchActivity"
                   android:screenOrientation="portrait"/>
 
-        <activity android:name=".ui.activity.VideoActivity"
+        <activity android:name="com.qzbc.cpqp.ui.activity.VideoActivity"
                   android:configChanges="orientation|screenSize|keyboardHidden"
                   android:screenOrientation="portrait"/>
     </application>
