@@ -82,10 +82,12 @@ public class SeekActivity extends BaseActivity implements RadioGroup.OnCheckedCh
 
         //将参数存入集合方便实用
         brandList.add("全部车型");
-        for (WholeBean.VtrainBusinessMenuListBean vtrainBusinessMenuListBean : mVtrainBusinessMenuList) {
-            if (vtrainBusinessMenuListBean.getMenuLevel() == 1) {
-                String menuName = vtrainBusinessMenuListBean.getMenuName();
-                brandList.add(menuName);
+        if(mVtrainBusinessMenuList != null) {
+            for (WholeBean.VtrainBusinessMenuListBean vtrainBusinessMenuListBean : mVtrainBusinessMenuList) {
+                if (vtrainBusinessMenuListBean.getMenuLevel() == 1) {
+                    String menuName = vtrainBusinessMenuListBean.getMenuName();
+                    brandList.add(menuName);
+                }
             }
         }
 
@@ -175,15 +177,17 @@ public class SeekActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     }
 
     private void initItemClick() {
-        mVideoAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                Intent intent = new Intent(SeekActivity.this, VideoActivity.class);
-                VtrainBusinessVideoListBean vtrainBusinessVideoListBean = mVtrainBusinessVideoList.get(position);
-                intent.putExtra("vtrainBusinessVideoListBean", (Parcelable) vtrainBusinessVideoListBean);
-                startActivity(intent);
-            }
-        });
+        if(mVideoAdapter != null) {
+            mVideoAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+                @Override
+                public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                    Intent intent = new Intent(SeekActivity.this, VideoActivity.class);
+                    VtrainBusinessVideoListBean vtrainBusinessVideoListBean = mVtrainBusinessVideoList.get(position);
+                    intent.putExtra("vtrainBusinessVideoListBean", (Parcelable) vtrainBusinessVideoListBean);
+                    startActivity(intent);
+                }
+            });
+        }
     }
 
     @Override

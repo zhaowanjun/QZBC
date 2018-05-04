@@ -57,22 +57,27 @@ public class MainActivity extends BaseActivity {
     }
 
     private void initItemClick() {
-        mBrandAdapter.setOnItemClickListener(new BrandAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(String url) {
-                openSearchActivity();
-            }
-        });
+        if(mBrandAdapter != null) {
+            mBrandAdapter.setOnItemClickListener(new BrandAdapter.OnItemClickListener() {
+                @Override
+                public void onItemClick(String url) {
+                    openSearchActivity();
+                }
+            });
+        }
 
-        mVideoAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                VtrainBusinessVideoListBean vtrainBusinessVideoListBean = mVtrainBusinessVideoList.get(position);
-                Intent intent = new Intent(MainActivity.this, VideoActivity.class);
-                intent.putExtra("vtrainBusinessVideoListBean", (Parcelable) vtrainBusinessVideoListBean);
-                startActivity(intent);
-            }
-        });
+        if(mVideoAdapter != null) {
+            mVideoAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+                @Override
+                public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                    VtrainBusinessVideoListBean vtrainBusinessVideoListBean = mVtrainBusinessVideoList.get(position);
+                    Intent intent = new Intent(MainActivity.this, VideoActivity.class);
+                    intent.putExtra("vtrainBusinessVideoListBean", (Parcelable) vtrainBusinessVideoListBean);
+                    startActivity(intent);
+                }
+            });
+        }
+
     }
 
     private void initBrandAdapter() {
