@@ -23,4 +23,6 @@ public interface QZBCApi {
     @POST("vapp.VTrain.vtrainAPPSearchVideo.hf")
     Call<FilterBean> searchVideoData(@Body SeekEntiry seekEntiry);
 
+    @POST("vapp.VTrain.vtrainAPPVideoQRCode.hf")
+    Call<FilterBean> scanQRCode(@Body SeekEntiry seekEntiry);
 }

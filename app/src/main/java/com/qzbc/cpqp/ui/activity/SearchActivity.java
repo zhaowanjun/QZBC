@@ -57,7 +57,7 @@ public class SearchActivity extends BaseActivity {
         initVideoAdapter();
         initItemClick();
         mQzbcApi = MyApplication.getQZBCApi();
-        mSeekEntiry.setECID(100211);
+        mSeekEntiry.setECID(MyApplication.getECID());
 
         //回车键搜索
         mEtSearchText.setOnKeyListener(new View.OnKeyListener() {

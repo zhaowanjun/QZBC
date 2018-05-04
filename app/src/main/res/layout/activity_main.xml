@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="拆装教程"
+            android:text="@string/title_bar_text"
             android:textSize="20sp"/>
 
         <ImageView
@@ -71,6 +71,7 @@
                     android:background="@drawable/layer_list_text_bg"
                     android:paddingBottom="5dp"
                     android:text="车系"
+                    android:textColor="@android:color/black"
                     android:textSize="13sp"/>
 
                 <TextView
@@ -109,13 +110,14 @@
                     android:background="@drawable/layer_list_text_bg"
                     android:paddingBottom="5dp"
                     android:text="装卸工艺"
+                    android:textColor="@android:color/black"
                     android:textSize="13sp"/>
 
                 <TextView
                     android:id="@+id/tv_more2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="15dp"
+                    android:layout_marginRight="15dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="5dp"
                     android:paddingBottom="5dp"

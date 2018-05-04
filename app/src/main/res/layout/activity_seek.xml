@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="拆装教程"
+            android:text="@string/title_bar_text"
             android:textSize="20sp"/>
 
         <ImageView
@@ -105,7 +105,7 @@
             android:id="@+id/rcv_search"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="15dp"/>
+            android:paddingTop="15dp"/>
     </ScrollView>
 
 </LinearLayout>

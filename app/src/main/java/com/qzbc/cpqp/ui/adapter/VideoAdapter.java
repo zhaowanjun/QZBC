@@ -45,8 +45,10 @@ public class VideoAdapter extends BaseQuickAdapter<VtrainBusinessVideoListBean, 
         TextView tvName = helper.getConvertView().findViewById(R.id.tv_videoName);
         ImageView ivPic = helper.getConvertView().findViewById(R.id.iv_videoPic);
         int screenWidth = ScreenUtil.instance(mContext).getScreenWidth();
-        ivPic.getLayoutParams().height = screenWidth * 9 / 32;
+        int px = ScreenUtil.instance(mContext).dip2px(8.0f);
+        ivPic.getLayoutParams().height = (screenWidth-px) * 9 / 32;
         tvName.setText(item.getVideoName());
+
         Glide.with(mContext)
                 .load(item.getVideoPic())
                 .centerCrop()

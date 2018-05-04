@@ -89,7 +89,7 @@ public class SeekActivity extends BaseActivity implements RadioGroup.OnCheckedCh
             }
         }
 
-        mSeekEntiry.setECID(100211);
+        mSeekEntiry.setECID(MyApplication.getECID());
     }
 
     private void initRadioButton() {

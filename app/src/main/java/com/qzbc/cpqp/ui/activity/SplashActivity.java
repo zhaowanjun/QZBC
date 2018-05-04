@@ -43,7 +43,7 @@ public class SplashActivity extends BaseActivity {
 
     private void loadData() {
         Entiry entiry = new Entiry();
-        entiry.setECID(100211);
+        entiry.setECID(MyApplication.getECID());
         entiry.setDeviceID(42);
 
         QZBCApi qzbcApi = MyApplication.getQZBCApi();

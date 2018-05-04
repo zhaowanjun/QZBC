@@ -13,8 +13,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class MyApplication extends Application {
     private static Context context;
-    private final String BASE_URL = "http://192.168.1.86/sdvrpi/";
+    private final String BASE_URL = "http://sdvr.handbbc.com/sdvrpi/";
     private static QZBCApi mQzbcApi;
+    private static int ECID = 100562;
 
     @Override
     public void onCreate() {
@@ -37,5 +38,9 @@ public class MyApplication extends Application {
 
     public static QZBCApi getQZBCApi() {
         return mQzbcApi;
+    }
+
+    public static int getECID() {
+        return ECID;
     }
 }

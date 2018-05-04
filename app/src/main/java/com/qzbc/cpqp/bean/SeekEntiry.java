@@ -6,6 +6,7 @@ package com.qzbc.cpqp.bean;
 public class SeekEntiry {
 
     private int ECID;
+    private int BVID;
     private String BusinessName;
     private String BelongPart;
     private String BelongTech;
@@ -17,6 +18,14 @@ public class SeekEntiry {
 
     public void setECID(int ECID) {
         this.ECID = ECID;
+    }
+
+    public int getBVID() {
+        return BVID;
+    }
+
+    public void setBVID(int BVID) {
+        this.BVID = BVID;
     }
 
     public String getBusinessName() {
