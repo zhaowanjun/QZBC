@@ -60,7 +60,7 @@ public class MainActivity extends BaseActivity {
         mBrandAdapter.setOnItemClickListener(new BrandAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(String url) {
-
+                openSearchActivity();
             }
         });
 

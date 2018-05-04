@@ -9,14 +9,13 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
-        android:background="@android:color/white"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp">
+        android:background="@android:color/white">
 
         <ImageView
             android:id="@+id/iv_menu"
-            android:layout_width="18dp"
-            android:layout_height="18dp"
+            android:layout_width="?android:attr/actionBarSize"
+            android:layout_height="?android:attr/actionBarSize"
+            android:padding="16dp"
             android:layout_centerVertical="true"
             android:src="@mipmap/menu"/>
 
@@ -29,10 +28,11 @@
 
         <ImageView
             android:id="@+id/iv_scan"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="?android:attr/actionBarSize"
+            android:layout_height="?android:attr/actionBarSize"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:padding="10dp"
             android:src="@mipmap/scan"/>
 
     </RelativeLayout>
@@ -72,17 +72,17 @@
                     android:paddingBottom="5dp"
                     android:text="车系"
                     android:textColor="@android:color/black"
-                    android:textSize="13sp"/>
+                    android:textSize="14sp"/>
 
                 <TextView
                     android:id="@+id/tv_more1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_marginTop="5dp"
-                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="8dp"
                     android:text="更多"
-                    android:textSize="12sp"/>
+                    android:textSize="13sp"/>
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/rcv_brand"
@@ -111,18 +111,18 @@
                     android:paddingBottom="5dp"
                     android:text="装卸工艺"
                     android:textColor="@android:color/black"
-                    android:textSize="13sp"/>
+                    android:textSize="14sp"/>
 
                 <TextView
                     android:id="@+id/tv_more2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="15dp"
                     android:layout_alignParentRight="true"
-                    android:layout_marginTop="5dp"
-                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="15dp"
                     android:text="更多"
-                    android:textSize="12sp"/>
+                    android:textSize="13sp"/>
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/rcv_video"
