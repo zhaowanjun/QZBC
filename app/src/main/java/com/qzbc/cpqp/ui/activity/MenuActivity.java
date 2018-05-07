@@ -40,7 +40,7 @@ public class MenuActivity extends BaseActivity {
                 finish();
                 break;
             case R.id.btn_exit:
-                startActivity(new Intent(MenuActivity.this, LoginActivity.class));
+                startActivity(new Intent(MenuActivity.this, LoginActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
                 finish();
                 break;
         }

@@ -1,6 +1,8 @@
 package com.qzbc.cpqp.ui.activity;
 
+import android.os.Message;
 import android.widget.ImageView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.qzbc.cpqp.R;
@@ -11,6 +13,7 @@ import com.qzbc.cpqp.utils.ScreenUtil;
 
 import butterknife.Bind;
 import butterknife.OnClick;
+import cn.jzvd.JZMediaManager;
 import cn.jzvd.JZUtils;
 import cn.jzvd.JZVideoPlayer;
 
@@ -55,7 +58,6 @@ public class VideoActivity extends BaseActivity {
         mTvIntroduce.setText("内容介绍：\n" + mDescription);
         mVideoPlayer.setUp(mUrl, MyVideoPlayer.SCREEN_WINDOW_NORMAL, "");
         mVideoPlayer.startVideo();
-
     }
 
     private void getIntentData() {
