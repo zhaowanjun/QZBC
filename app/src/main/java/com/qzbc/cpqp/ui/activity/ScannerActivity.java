@@ -3,6 +3,8 @@ package com.qzbc.cpqp.ui.activity;
 import android.content.Intent;
 import android.os.Parcelable;
 import android.text.TextUtils;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.zxing.activity.CaptureActivity;
@@ -15,6 +17,8 @@ import com.qzbc.cpqp.bean.SeekEntiry;
 import com.qzbc.cpqp.bean.VtrainBusinessVideoListBean;
 import com.qzbc.cpqp.ui.base.BaseActivity;
 import com.qzbc.cpqp.utils.ToastUtil;
+
+import org.w3c.dom.Text;
 
 import java.util.List;
 
